@@ -1,0 +1,11 @@
+.container {
+    backdrop-filter: blur(20px);
+    border: 2px white solid;
+    /* color: #fff; */
+    width:58%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 64px;
+   
+
+}

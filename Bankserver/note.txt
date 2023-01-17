@@ -1,0 +1,55 @@
+Server creation
+.....................
+install express
+    - npm i express
+
+1.import express
+
+2.create an app using express
+
+3.create port number .it will be 3000 series
+
+4.create request as we need
+
+nodemon Server
+.................
+-npm i -g nodemon
+
+user AUthentication
+............................
+
+    -JWT(JSON web token) token
+    .............................
+    - a librery is needed for this
+    -to install librery - npm i jsonwebtoken
+    -sign - method is used for generate token
+    -verify()- method to verify jwt tokens
+
+middlewares
+...................
+-it have the cappcity to control server requests 
+
+- it is a function with 3 arguments (request,response,next)
+-two type
+    -application specific middlewares
+    -Router specific middlewares
+
+serevr mongodb integration
+..............................
+-extra library needed - mongoose(library used to integrate server and mongodb)
+                        -npm i mongoose
+
+ server mdb integration
+ ...........................
+
+// 1.import mongoose
+// 2.state connection string via mongoose
+// 3.define a bank db model
+// 4.export the schema to use in another file
+
+Angular server integration / front end back end integration
+..................................................................
+
+-To integrate Angular and node we use a module - cors (cross origin resourse sharing)
+ 4200-3000
+        npm i cors

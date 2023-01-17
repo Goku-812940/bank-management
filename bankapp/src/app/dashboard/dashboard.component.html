@@ -1,0 +1,53 @@
+<h1 class="text-white p-4">Welcome {{user}}</h1>
+<h1 class="text-white p-4">{{dateandtime |date :'short'}}</h1>
+<a class=" con mt-3 me-3 p-4 ms-5 " routerLink='/transaction' href="">view transaction history</a>
+<div> <button type="submit" (click)="logout()" class=" btn btn1">Logout</button></div>
+
+<div> <button type="submit" (click)="deleteconfirm()" class=" btn btn1">Delete</button></div>
+<app-deleteconfirm (onDelete)="delete($event)" (onCancel)="oncancel()" [item]="acno"></app-deleteconfirm>
+ 
+
+<form [ngClass]="acno?'style': '' " (ngSubmit)="Deposit()" [formGroup]="depositform">
+    <div class="container ">
+        <h2 class="mt-3">Deposit</h2>
+        <div class="form-control">
+            <input name="acnum" type="text" formControlName="acno" placeholder="Account number" required />
+        </div>
+
+        <div class="form-control">
+            <input type="password" formControlName="psw" name="password" placeholder="Password" required />
+        </div>
+
+        <div class="form-control">
+            <input name="amount" formControlName="amnt" type="text" placeholder="Amount" required />
+        </div>
+
+
+        <button type="submit" class=" btn">Deposit</button>
+    </div>
+</form>
+
+
+
+
+<div  [ngClass]="acno?'style': '' " class="container ">
+    <h2 class="mt-3">Withdraw</h2>
+    <form (ngSubmit)="Withdraw()" [formGroup]="withdrawform">
+        <div class="form-control">
+            <input name="acnum1" formControlName="acno1" type="text" placeholder="Account number" required />
+        </div>
+
+        <div class="form-control">
+            <input type="password" formControlName="psw1" name="password1" placeholder="Password" required />
+        </div>
+
+        <div class="form-control">
+            <input name="amount1" formControlName="amnt1" type="text" placeholder="Amount" required />
+        </div>
+
+
+        <button type="submit" class=" btn">Withdraw</button>
+
+    </form>
+
+</div>

@@ -1,0 +1,145 @@
+data binding in angular
+.............................
+
+1.one way binding
+    1.1.component to view
+        1.1.1.strin interpollation  {{}}
+        1.1.2.property binding  [property="value"]
+    1.2.view to component
+        1.2.1.event binding  (eventname)="method name()"
+        1.2.2.event binding using $event (eventname)="methodname($event)"
+        1.2.3.event using template rendering variable  #variable
+2.two way binding
+    1.1.ng model  [(ngmodule)]="value"   
+
+redirection in angular
+...............................
+navigateByUrl -method used to redirection
+
+Router- class
+
+angular services
+............................
+ng g s servicename
+
+angular dierectives
+..........................
+1.structural dierectives - to handle structured datas in view of a component
+
+ ngFor   -can directly appliy in html to access elements from array
+
+ ngif  -
+
+ 2.component dierectives
+
+ 3.Atribute dierectives
+
+ Validation in angular
+ ...........................
+
+ 1.template driven form
+
+ 2.model driven form
+    -Reactive Form
+
+    ReactiveFormsModule -used to creste model form
+
+    FormBuilder -class of ReactiveFormsModule
+        -group,array,control
+
+Validate model form
+..............,......,.....,.....
+
+
+validator - class
+ acces error in validator ReactiveFormsModule
+
+    this.registrationfoem.get('uname')?.error
+
+                -valid - empty content
+
+                -invalid - content
+
+Local strorage in angular
+..................................
+
+-store   loccalstorage.setItem()
+
+-acces   loccalstorage.getItem()
+
+-delete  loccalstorage.removeItem()
+
+parent child component communiction in angular
+................................................
+
+@input -parent to child data sharing
+
+@output -child to parent data sharing
+
+datas only share via selectors
+
+
+user Defined Event creation
+.................................
+EventEmitter (from angular/core) -clas used to create events
+emit()  -  to start the event
+
+Angular pipe
+................
+
+to transform datas into another format
+
+eg-   date pipe
+
+Date in angular
+.................
+
+Date - class
+
+create an object of class date to acces date and time
+
+Client server integration
+............................
+.............................
+
+http request creation
+........................
+ 
+ HttpClientModule -module
+ HttpClinet -class
+
+ Asynchronous request in ts 
+ ..............................
+
+ js - promise   ---resolve then()
+                ---reject  catch()
+
+
+ts -observable  ---resolve  subscribe()
+                ---reject   catch()
+
+    Rxjs(reactive extension for js) - library used to solve Asynchronous code in ts
+
+appen token in headers in http
+....................................
+
+HttpHeaders - class to create header object
+
+
+// global overloading headers
+const option={
+  headers:new HttpHeaders()
+}
+
+ 
+gettoken(){
+const token=JSON.parse(localStorage.getItem('token') || '')
+
+let headers= new HttpHeaders()
+if(token){
+  option.headers= headers.append('access-token',token)
+}
+return option
+}
+
+        

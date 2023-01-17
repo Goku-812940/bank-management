@@ -1,0 +1,26 @@
+<div>
+    <h1 class="a10">{{aim}}</h1>
+</div>
+<div class="container ">
+    <h2 class="mt-3">Please Login</h2>
+    <form (ngSubmit)="login()" [formGroup]=" loginForm">
+        <div class="form-control">
+            <input  name="acnum"  formControlName="acno" type="text" [placeholder]="data" required />
+        </div>
+        <div *ngIf="this.loginForm.get('acno')?.errors && this.loginForm.get('acno')?.touched" >
+            <p class="text-danger">incurrect acno</p>
+        </div>
+
+        <div class="form-control">
+            <input type="password" formControlName="psw" name="password" placeholder="Password"required />
+        </div>
+        <div *ngIf="this.loginForm.get('psw')?.errors && this.loginForm.get('psw')?.touched" >
+            <p class="text-danger">incurrect password</p>
+        </div>
+
+
+        <button type="submit"  class=" btn">Login</button>
+        <p class="text">Don't have an account? <a routerLink="register">Register</a></p>
+    </form>
+
+</div>

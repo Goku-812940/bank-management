@@ -1,0 +1,30 @@
+.container {
+
+   
+    backdrop-filter: blur(20px);
+    border: 2px white solid;
+    /* color: #fff; */
+    width:32%;
+    height:139px;
+    border-radius: 6px;
+    margin-top: 64px;
+   
+
+}
+.btn {
+
+    width: 35%;
+    background-color: transparent;
+    border: 2px white solid;
+    color: antiquewhite;
+    padding: 6px;
+    font-family: inherit;
+    border-radius: 5px;
+    font-size: 16px;
+   
+
+}
+.btn:hover{
+    background-color: antiquewhite;
+    color: rgb(2, 2, 2);
+}
